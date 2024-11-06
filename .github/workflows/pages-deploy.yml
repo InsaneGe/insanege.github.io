@@ -1,10 +1,10 @@
 name: "Build and Deploy"
 on:
   push:
-    branches:
+    branches: # 当有新的提交推送到如下分支时，触发工作流。
       - main
       - master
-    paths-ignore:
+    paths-ignore: # 如果只有如下文件发生变化，不会触发工作流。
       - .gitignore
       - README.md
       - LICENSE
@@ -46,16 +46,16 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}" # 使用 Bundler 执行 Jekyll 的构建命令。jekyll b 是 jekyll build 的缩写，用于生成静态网站。
         env:
           JEKYLL_ENV: "production"
 
       - name: Test site
-        run: |
+      # 使用 Bundler 执行 htmlproofer 工具来测试生成的 HTML 文件。
+        run: | 
           bundle exec htmlproofer _site \
             \-\-disable-external \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
-
+            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
