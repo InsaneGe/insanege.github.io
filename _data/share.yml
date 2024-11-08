@@ -2,17 +2,34 @@
 #  Icons from <https://fontawesome.com/>
 
 platforms:
+  - type: QQ
+    icon: "fab fa-qq" # qq在fab库(font-awesome brands)好像是没有square图标，用 fab fa-square-qq 替代会导致没有显示
+    link: "https://connect.qq.com/widget/shareqq/index.html?url=URL&title=TITLE"
+
+  # - type: Wechat # 微信并没有提供一个像其他社交平台那样的公开分享链接。微信的分享功能通常通过其官方的JavaScript SDK或者移动应用内的分享功能来实现。
+  #   icon: "fab fa-weixin"
+  #   link: "https://sns.qq.com/cgi-bin/message/send?msgtype=text&text=TITLE&url=URL"
+
   - type: Twitter
     icon: "fa-brands fa-square-x-twitter"
-    link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
+    link: "https://x.com/intent/tweet?text=TITLE&url=URL"
+
+  - type: Reddit
+    icon: "fa-brands fa-square-reddit"
+    link: "https://www.reddit.com/submit?url=URL&title=TITLE"
 
   - type: Facebook
     icon: "fab fa-facebook-square"
     link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
 
   - type: Telegram
-    icon: "fab fa-telegram"
+    icon: "fab fa-telegram" 
     link: "https://t.me/share/url?url=URL&text=TITLE"
+
+  - type: Line
+    icon: "fab fa-line"
+    link: "https://lineit.line.me/share/ui?url=URL&text=TITLE"
+
 
   # Uncomment below if you need to.
   #
@@ -40,10 +57,6 @@ platforms:
   # - type: Bluesky
   #   icon: "fa-brands fa-bluesky"
   #   link: "https://bsky.app/intent/compose?text=TITLE%20URL"
-  #
-  # - type: Reddit
-  #   icon: "fa-brands fa-square-reddit"
-  #   link: "https://www.reddit.com/submit?url=URL&title=TITLE"
   #
   # - type: Threads
   #   icon: "fa-brands fa-square-threads"

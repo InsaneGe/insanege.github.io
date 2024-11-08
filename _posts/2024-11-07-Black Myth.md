@@ -1,8 +1,10 @@
 ---
 title: Black Myth
-date: 2024-11-06 20:30:00 +0800 # 东八区（UTC/GMT+0800）是比世界协调时间（UTC）/格林尼治时间（GMT）快8小时的时区
+date: 2024-11-07 20:30:00 +0800 # 东八区（UTC/GMT+0800）是比世界协调时间（UTC）/格林尼治时间（GMT）快8小时的时区
 categories: [杂想漫谈]
 tags: [杂谈]     # TAG names should always be lowercase
+authors: [Bohemian]
+description: "一个轻度3A玩家玩黑神话后的碎碎念"
 ---
 
 
@@ -15,18 +17,18 @@ tags: [杂谈]     # TAG names should always be lowercase
 
 {% include embed/bilibili.html id='BV1FcSyYREej' %}
 
+### youtube测试
+
+{% include embed/youtube.html id='Balreaj8Yqs' %}
+
 ### Links
+[B站](https://www.bilibili.com)
 
-<https://www.bilibili.com/>
+<https://www.bilibili.com>
 
-[个人知乎主页](https://www.zhihu.com/people/insanehun-ne-msr)
 
-# H1
+# H1 jekyll
 
-## jekyll
-在 Jekyll 中，site 是一个全局变量，包含了关于站点的各种信息和配置。这个变量在 Liquid 模板引擎中非常常用，用于动态生成页面内容。
-如site.author.name 是访问_config.yml中的author.name
-site.data 是访问_data文件夹中的文件
 
 ## Prompts
 
@@ -69,6 +71,71 @@ The image below will toggle dark/light mode based on theme preference, notice it
 ![light mode only](/assets/images/avatar.jpg){: .light .w-75 .shadow .rounded-10 w='564' h='564' }
 ![dark mode only](/assets/images/avatar.jpg){: .dark .w-75 .shadow .rounded-10 w='564' h='564' }
 
+
+## Footnote
+
+Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
+
+## Inline code
+
+This is an example of `Inline Code`.
+
+## Filepath
+
+Here is the `/path/to/the/file.extend`{: .filepath}.
+
+## Code blocks
+
+### Common
+
+```text
+This is a common code snippet, without syntax highlight and line number.
+```
+
+### Specific Language
+
+```bash
+if [ $? -ne 0 ]; then
+  echo "The command was not successful.";
+  #do the needful / exit
+fi;
+```
+
+### Specific filename
+
+```sass
+@import
+  "colors/light-typography",
+  "colors/dark-typography";
+```
+{: file='_sass/jekyll-theme-chirpy.scss'}
+
+## Mathematics
+
+The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+
+$$
+\begin{equation}
+  \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
+  \label{eq:series}
+\end{equation}
+$$
+
+We can reference the equation as \eqref{eq:series}.
+
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+## Mermaid SVG
+
+```mermaid
+ gantt
+  title  Adding GANTT diagram functionality to mermaid
+  apple :a, 2017-07-20, 1w
+  banana :crit, b, 2017-07-23, 1d
+  cherry :active, c, after b a, 1d
+```
 
 ### Ordered list
 
