@@ -38,7 +38,6 @@ image:
 {%
   include embed/audio.html
   src='assets/audio/短空心(叼烟).mp3'
-  types='ogg|wav|aac'
   title='Demo audio'
 %}
 
