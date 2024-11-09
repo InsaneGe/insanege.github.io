@@ -2,6 +2,12 @@
 #  Icons from <https://fontawesome.com/>
 
 platforms:
+  # qq微信的分享较麻烦。不能做到和如下外网app一样点击链接后在应用中去唤起分享功能。但确实存在有URL Scheme可以唤起手机上的QQ应用并直接进入分享界面的功能，但应该需要去https://open.tencent.com/这里鼓捣。
+  # URL Scheme（统一资源定位符方案）是一种标准化的标识符，用于指定互联网上资源的位置和访问方法。在移动开发领域，URL Scheme 特指一种特殊的URL格式，它可以用来启动已安装的移动应用程序，并向该应用程序传递数据。
+  # 一个典型的URL Scheme格式如：<custom-scheme>://<path>?<query>
+  # <custom-scheme>：自定义的协议名称，通常与应用名相关联。
+  # <path>：路径部分，可以用来指定应用内部的不同页面或功能。
+  # <query>：查询字符串，用于传递额外的数据。
   - type: QQ
     icon: "fab fa-qq" # qq在fab库(font-awesome brands)好像是没有square图标，用 fab fa-square-qq 替代会导致没有显示
     link: "https://connect.qq.com/widget/shareqq/index.html?url=URL&title=TITLE"

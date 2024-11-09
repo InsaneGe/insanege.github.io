@@ -109,11 +109,8 @@ cdn:
 # the avatar on sidebar, support local or CORS resources
 avatar: "/assets/images/avatar.jpg"
 
-# 启用动画背景特效
-backgroud_animation: false
-
-# 启用鼠标点击特效
-mouse_click_effect: false
+# 启用背景特效
+background: true
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -133,7 +130,7 @@ panel:
     # 最近更新
     lastmod: true
     # 热门标签
-    trending_tags: false
+    trending_tags: true
     # 目录
     toc: true
 

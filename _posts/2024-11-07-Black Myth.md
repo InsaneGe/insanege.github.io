@@ -5,27 +5,42 @@ categories: [杂想漫谈]
 tags: [杂谈]     # TAG names should always be lowercase
 authors: [Bohemian]
 description: "一个轻度3A玩家玩黑神话后的碎碎念"
+comments: true
+toc: true
+pin: true
+math: true
+mermaid: true
+image:
+  path: /assets/images/golden_band.jpg
+  alt: 金箍难卸
 ---
 
 
 
-### 你怎么知道我无伤幽魂
+### video autoplay
 
-{% include embed/bilibili.html id='BV1kJSVY3ECz' %}
+{% include embed/bilibili.html id='BV1kJSVY3ECz' title='' autoplay=1 %}
 
-### 迄今看到最优雅的识破仙人博主
+### test not autoplay and not danmaku setting
 
-{% include embed/bilibili.html id='BV1FcSyYREej' %}
+{% include embed/bilibili.html id='BV1FcSyYREej' title='迄今看到最优雅的识破仙人博主' danmaku=0 autoplay=0 start=10 mute=1%}
 
-### youtube测试
+### youtube
 
-{% include embed/youtube.html id='Balreaj8Yqs' %}
+{% include embed/youtube.html id='GWGbOjlJDkU' title='test' autoplay=0 start=10%}
 
 ### Links
 [B站](https://www.bilibili.com)
 
 <https://www.bilibili.com>
 
+### audio
+{%
+  include embed/audio.html
+  src='assets/audio/短空心(叼烟).mp3'
+  types='ogg|wav|aac'
+  title='Demo audio'
+%}
 
 # H1 jekyll
 
@@ -110,9 +125,28 @@ fi;
 ```
 {: file='_sass/jekyll-theme-chirpy.scss'}
 
+### Liquid Codes
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
+
 ## Mathematics
 
 The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+
+<!-- Inline math in lines, NO blank lines -->
+
+"Lorem ipsum dolor sit amet, $$ LaTeX_math_expression $$ consectetur adipiscing elit."
+
+<!-- Inline math in lists, escape the first `$` -->
+
+1. \$$ LaTeX_math_expression $$
+2. \$$ LaTeX_math_expression $$
+3. \$$ LaTeX_math_expression $$
 
 $$
 \begin{equation}
@@ -132,9 +166,28 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 ```mermaid
  gantt
   title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
+  sleep :a, 2024-06-20, 1d
+  sleep more :crit, b, after a, 1w
+  cherry :active, c, after b a, 1h
+```
+
+```mermaid
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+```
+
+```mermaid
+sequenceDiagram
+    participant 客户
+    participant 服务器
+    客户->>服务器: 发送请求
+    服务器-->>客户: 返回响应
+    客户->>服务器: 请求数据
+    服务器-->>客户: 发送数据
 ```
 
 ### Ordered list

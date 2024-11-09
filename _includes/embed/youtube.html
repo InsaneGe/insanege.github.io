@@ -1,9 +1,15 @@
-<iframe
-  class="embed-video"
-  loading="lazy"
-  src="https://www.youtube.com/embed/{{ include.id }}"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
+<div class="embed-youtube">
+  <h4>{{ include.title | default: "" }}</h4>  
+  <iframe
+    class="embed-video"
+    loading="lazy"
+    src="https://www.youtube.com/embed/{{ include.id }}?
+        autoplay={{ include.autoplay | default: 0 }}&
+        start={{ include.start | default: 0 }}&
+        loop={{ include.loop | default: 0 }}"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
