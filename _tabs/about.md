@@ -4,5 +4,5 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> 未完待续...
+> to be continued...
 {: .prompt-tip }

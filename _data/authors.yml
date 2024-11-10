@@ -6,12 +6,12 @@
 #   url: {homepage_of_author}
 # -------------------------------------
 
-Bohemian:
+git:
   name: Bohemian
-  twitter: qi_jue
-  url: https://x.com/qijue/
-
-InsaneGe:
-  name: InsaneGe
-  twitter: qi_jue
+  github: InsanGe
   url: https://github.com/insanege/
+
+x:
+  name: Bohemian
+  x: qi_jue
+  url: https://x.com/qijue/
