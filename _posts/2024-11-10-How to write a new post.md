@@ -115,7 +115,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 ### Bilibili
 
-{% include embed/bilibili.html id='BV1kJSVY3ECz' title='Bilibili video title' danmaku=0 autoplay=0 start=0 mute=1 %}
+{% include embed/bilibili.html id='BV1Th411x7ii' title='Bilibili video title' danmaku=0 autoplay=0 start=0 mute=1 %}
 
 ### Youtube and so on
 
@@ -124,7 +124,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 ## Audio
 {%
   include embed/audio.html
-  src='assets/audio/短空心(叼烟).mp3'
+  src='assets/audio/sample-3s.mp3'
   title='audio demo'
 %}
 
@@ -160,10 +160,10 @@ The image below will toggle dark/light mode based on theme preference, notice it
 
 ```mermaid
  gantt
-  title  Adding GANTT diagram functionality to mermaid
-  sleep :a, 2024-06-20, 1d
-  sleep more :crit, b, after a, 1w
-  cherry :active, c, after b a, 1h
+  title  GANTT diagram of mermaid
+  sleep :a, 2024-06-20, 8h
+  sleep more :crit, b, after a, 12h
+  sleep much more :active, c, after b a, 1d
 ```
 
 ```mermaid

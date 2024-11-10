@@ -1525,6 +1525,11 @@ search {
   }
 } /* min-width: 1650px */
 
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
 
 #animation {
   position: fixed;
@@ -1549,7 +1554,7 @@ search {
   }
 
   @media all and (min-width: 1200px) {//这段代码只在屏幕宽度大于或等于1200px时生效。
-    .animation-circle {
+    .animation_circle {
       position: absolute;
       left: var(--circle-left);
       bottom: -300px;
@@ -1575,7 +1580,7 @@ search {
   }
 
   @media all and (max-width: 1199px) {//这段代码在屏幕宽度小于1200px时生效，将 .animation-circle 元素隐藏，使其不在小屏幕上显示。
-    .animation-circle {
+    .animation_circle {
       display: none;
     }
   }

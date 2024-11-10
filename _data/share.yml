@@ -9,7 +9,7 @@ platforms:
   # <path>：路径部分，可以用来指定应用内部的不同页面或功能。
   # <query>：查询字符串，用于传递额外的数据。
 
-  - type: Twitter
+  - type: X
     icon: "fa-brands fa-square-x-twitter"
     link: "https://x.com/intent/tweet?text=TITLE&url=URL"
 
@@ -20,7 +20,7 @@ platforms:
   - type: Telegram
     icon: "fab fa-telegram" 
     link: "https://t.me/share/url?url=URL&text=TITLE"
-    
+
   - type: Facebook
     icon: "fab fa-facebook-square"
     link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
