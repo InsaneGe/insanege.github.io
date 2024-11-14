@@ -16,10 +16,10 @@ timezone: Asia/Shanghai
 
 title: Bohemian # the main title
 
-tagline: すBohemianき # it will display as the subtitle
+tagline: the alpha where everything starts, the omega where everything ends # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  the alpha where everything starts, the omega where everything ends
+  the alpha where everything starts, the omega where everything ends…
 
 # Fill in the protocol & hostname for your site. The full URL to your site. Note: site.github.url will be used by default.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.

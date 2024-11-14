@@ -3,8 +3,8 @@ title: How to write a new post
 date: 2024-11-10 06:21:00 +0800 # 东八区（UTC/GMT+0800）是比世界协调时间（UTC）/格林尼治时间（GMT）快8小时的时区
 categories: [tutorials]
 tags: [tutorial]     # TAG names should always be lowercase
-authors: [git]
-description: "a simple show to supported components in a post"
+authors: [githubio]
+description: "a simple demonstration to supported formats in a post"
 comments: true
 toc: true
 pin: true
@@ -87,39 +87,22 @@ fi;
 ```
 {% endraw %}
 
-## Math powered by [**MathJax**](https://www.mathjax.org/)
+### code blocks without line number
+```c++
+cout<<"hello world"<<endl;
+```
+{: .nolineno }
 
-<!-- Inline math in lines, NO blank lines -->
-
-"Lorem ipsum dolor sit amet, $$ LaTeX math expression $$ consectetur adipiscing elit."
-
-<!-- Inline math in lists, escape the first `$` -->
-
-1. \$$ LaTeX math expression $$
-2. \$$ LaTeX math expression $$
-
-$$
-\begin{equation}
-  \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
-  \label{eq:series}
-\end{equation}
-$$
-
-We can reference the equation as \eqref{eq:series}.
-
-When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
-
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 ## Video 
 
 ### Bilibili
 
-{% include embed/bilibili.html id='BV1Th411x7ii' title='Bilibili video title' danmaku=0 autoplay=0 start=0 mute=1 %}
+{% include embed/bilibili.html id='BV1Th411x7ii' title='【8K】来自宇宙深处的未知与震撼' %}
 
-### Youtube and so on
+### Youtube(a VPN is required to load it successfully)
 
-{% include embed/youtube.html id='GWGbOjlJDkU' title='Youtube video title' autoplay=0 start=10 %}
+{% include embed/youtube.html id='GWGbOjlJDkU' title="Who are you?" start=240 %}
 
 ## Audio
 {%
@@ -154,6 +137,106 @@ The image below will toggle dark/light mode based on theme preference, notice it
 <!-- .rounded-10 用于设置元素的圆角效果 -->
 ![light mode only](/assets/images/avatar.jpg){: .light .w-20 .shadow .rounded-10 w='200' h='200' }
 ![dark mode only](/assets/images/avatar.jpg){: .dark .w-20 .shadow .rounded-10 w='200' h='200' }
+
+## Math powered by [**MathJax**](https://www.mathjax.org/)
+
+### inline math
+<!-- Inline math in lines, NO blank lines -->
+
+both $LaTeX-math-expression$ and $$ LaTeX-math-expression $$" are fine.
+
+<!-- Inline math in lists, escape the first `$` -->
+
+1. \$$ LaTeX-math-expression $$
+2. \$$ LaTeX-math-expression $$
+
+### centered matrix and left aligned matrix
+
+$$
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  9 & 8 & 7 \\
+  6 & 5 & 4 \\
+  3 & 2 & 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+  30 & 24 & 18 \\
+  84 & 69 & 54 \\
+  138 & 114 & 90
+\end{pmatrix}
+$$
+
+<!-- left aligned matrix, escape the first `$` -->
+
+\$$
+\begin{bmatrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9
+\end{bmatrix}
+$$
+
+\$$
+\begin{Bmatrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9
+\end{Bmatrix}
+$$
+
+### equation
+
+$$
+\begin{equation}
+  \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
+  \label{eq:series1}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+  \lim_{x \to 0} \frac{x}{\sin x}=1
+  \label{eq:series2}
+\end{equation}
+$$
+
+We can reference the equation as \eqref{eq:series1}.
+We can reference the equation as \eqref{eq:series2}.
+
+
+$$
+\begin{cases}
+  x + y = 5 \\
+  x - y = 1
+\end{cases}
+$$
+
+<!-- left aligned matrix, escape the first `$` and \ \quad is used to add a space -->
+
+\$$
+f(x)=\begin{cases}
+  x \quad (x>0) \\
+  0 \quad (x<=0)
+\end{cases}
+$$
+
+\$$
+f(x)=\begin{cases}
+  x \ (x>0) \\
+  0 \ (x<=0)
+\end{cases}
+$$
+
+
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 
 ## Graphs supported by [Mermaid](https://mermaid.js.org/intro/getting-started.html)
@@ -233,6 +316,13 @@ Here is the `/path/to/the/file.extend`{: .filepath}.
 ## Footnote
 
 Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
+
+## other formats
+Any other format supported by markdown is also supported.
+
+<br>
+<br>
+<br>
 
 [^footnote]: The footnote source
 [^fn-nth-2]: The 2nd footnote source

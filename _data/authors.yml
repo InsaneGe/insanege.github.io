@@ -5,13 +5,22 @@
 #   twitter: {twitter_of_author}
 #   url: {homepage_of_author}
 # -------------------------------------
-
-git:
+githubio:
   name: Bohemian
-  github: InsanGe
+  github: InsaneGe
+  url: https://insanege.github.io/
+
+github:
+  name: Bohemian
+  github: InsaneGe
   url: https://github.com/insanege/
 
 x:
   name: Bohemian
   x: qi_jue
   url: https://x.com/qijue/
+
+ins:
+  name: Bohemian
+  ins: bohe6mian
+  url: https://www.instagram.com/bohe6mian/

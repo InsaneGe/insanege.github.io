@@ -1,20 +1,14 @@
-<!-- 可以通过src中的参数来定制视频的播放行为 -->
 <div class="embed-bilibili">
   <h4>{{ include.title | default: "" }}</h4>
   <iframe
     class="embed-video"
     loading="lazy"
-    src="https://player.bilibili.com/player.html?bvid={{ include.id }}&
-        autoplay={{ include.autoplay | default: 0 }}&
-        start={{ include.start | default: 0 }}&
-        loop={{ include.loop | default: 0 }}&
-        danmaku={{ include.danmaku | default: 0 }}&
-        page={{ include.page | default: 1 }}"
-        mute={{ include.mute | default: 1 }}
+    src="https://player.bilibili.com/player.html?isOutside=true&bvid={{ include.id }}&
+        cid={{ include.cid }}&
+        p={{ include.p | default: 1 }}"
     scrolling="no"
     frameborder="0"
     framespacing="0"
     allowfullscreen="true"
   ></iframe>
 </div>
-
