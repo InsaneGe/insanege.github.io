@@ -120,7 +120,7 @@ image:
 {%
   include embed/audio.html
   src='assets/blackmyth/黑神话第一章动画尘缘已尽金海尽干裁切.mp3'
-  title='第一章动画-尘缘已尽金海尽干'
+  title='第一章动画-尘缘已断金海尽干'
 %}
 游玩时关于台词唯有一困惑之处，会说出**“满城百姓，感激不尽”**此般壮语的黄风大圣怎会是最终boss呢，为此特意去搜看了些[解读](https://www.bilibili.com/video/BV1fGpeeGEXE)，叹黄凤大圣是为悲情boss，人妖共存就是不被你们神佛所容吗？众生次第神佛为何就高一等？
 同时关于这部分我同样认为灵吉菩萨也是在引导着天命人反神佛。
